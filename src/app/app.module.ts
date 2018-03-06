@@ -8,20 +8,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { ExceptionService } from './api/exception.service';
 
 import { AppComponent } from './app.component';
+import { AppRouterModule } from './app.router.module';
 import { MaterialModule } from './infrastructure/material.module';
 import { TerritoryService } from './api';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRouterModule
   ],
   providers: [TerritoryService, ExceptionService],
   bootstrap: [AppComponent]

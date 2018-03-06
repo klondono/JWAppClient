@@ -18,15 +18,19 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getSpeakers();
+    this.getTerritories();
   }
 
-  getSpeakers() {
+  getTerritories() {
     this.territories = [];
 
     this.territoryService.getTerritories().subscribe(territories => {
       this.territories = territories;
-    });
+    },
+    (err) => {
+      console.log(err);
+    },
+    () => {console.log('done'); });
   }
 
 }
