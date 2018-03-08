@@ -6,12 +6,12 @@ import {Routes, RouterModule} from '@angular/router';
 
 // Make sure we have to import this here
 import { HttpClientModule } from '@angular/common/http';
-import { ExceptionService } from './api/exception.service';
+import { ExceptionService } from './infrastructure/api/exception.service';
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from './infrastructure/material.module';
-import { TerritoryService } from './api';
+import { TerritoryService } from './infrastructure/api';
 import { HomeComponent } from './home/home.component';
+import { MaterialModule } from './infrastructure/angularMaterial/material.module';
 
 // configure routes
 export const routes: Routes = [

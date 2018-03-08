@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TerritoryService } from './api';
-import { ITerritory } from './models';
+
+import { TerritoryService } from './infrastructure/api';
+import { ITerritory } from './infrastructure/models';
 
 
 @Component({

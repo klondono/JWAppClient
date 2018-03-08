@@ -4,8 +4,10 @@ import { Observable } from 'rxjs/Observable';
 import { catchError, finalize, map } from 'rxjs/operators';
 
 import { APICONFIG } from '../../config/api.config';
-import { ITerritory } from './../../models';
+
 import { ExceptionService } from '../exception.service';
+import { ITerritory } from '../../models';
+
 
 
 const territoriesUrl = APICONFIG.urls.territories;
