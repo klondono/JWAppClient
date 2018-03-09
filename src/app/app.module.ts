@@ -15,12 +15,9 @@ import { MaterialModule } from './infrastructure/angularMaterial/material.module
 
 // configure routes
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  {
-    path: 'home',
-    component: HomeComponent,
-    // data: { preload: true }
-  },
+  { path: '**', pathMatch: 'full', redirectTo: 'territory' },
+  { path: 'territory', loadChildren: './territorymanager/territorymanager.module#TerritoryManagerModule'},
+  { path: 'home', component: HomeComponent}
 ];
 
 @NgModule({
