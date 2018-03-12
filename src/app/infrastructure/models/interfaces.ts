@@ -10,26 +10,26 @@ export interface ITerritoryAssignment {
 }
 
 export interface ITerritory {
-    TerritoryId: number;
-    TerritoryNumber: number;
-    TerritoryLocation: string;
-    TerritoryDescription: string;
-    TerritoryMapLink: string;
-    CurrentlyAssigned: number | null;
-    CurrentlyAssignedLong: string;
-    AssignedOn: Date | string | null;
-    LastPreached: Date | string | null;
-    IsActive: boolean | null;
-    DateAdded: Date | string | null;
-    DateModified: Date | string | null;
-    UserAdded: number | null;
-    UserModified: number | null;
-    UserAddedLong: string;
-    UserModifiedLong: string;
-    CongregationId: number | null;
-    Congregation: ICongregation;
-    TerritoryAddressLink: ITerritoryAddressLink[];
-    TerritoryAssignment: ITerritoryAssignment[];
+    TerritoryId?: number;
+    TerritoryNumber?: number;
+    TerritoryLocation?: string;
+    TerritoryDescription?: string;
+    TerritoryMapLink?: string;
+    CurrentlyAssigned?: number | null;
+    CurrentlyAssignedLong?: string;
+    AssignedOn?: Date | string | null;
+    LastPreached?: Date | string | null;
+    IsActive?: boolean | null;
+    DateAdded?: Date | string | null;
+    DateModified?: Date | string | null;
+    UserAdded?: number | null;
+    UserModified?: number | null;
+    UserAddedLong?: string;
+    UserModifiedLong?: string;
+    CongregationId?: number | null;
+    Congregation?: ICongregation;
+    TerritoryAddressLink?: ITerritoryAddressLink[];
+    TerritoryAssignment?: ITerritoryAssignment[];
 }
 
 export interface ICongregation {
