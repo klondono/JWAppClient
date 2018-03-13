@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 // Make sure we have to import this here
 import { HttpClientModule } from '@angular/common/http';
@@ -31,6 +33,7 @@ export const routes: Routes = [
     MaterialModule,
     FormsModule,
     HttpClientModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
     RouterModule.forRoot(routes)
   ],
   providers: [TerritoryService, ExceptionService],
